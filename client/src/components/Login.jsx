@@ -20,7 +20,7 @@ function Login({ isAuthenticated, setIsAuthenticated }) {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/user/login",
+        "https://enchanting-pear-abalone.cyclic.app/api/v1/user/login",
         { email, password },
         { withCredentials: true, headers: { "Content-Type": "application/json" } }
       );

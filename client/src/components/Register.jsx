@@ -29,7 +29,7 @@ const Register = ({ isAuthenticated, setIsAuthenticated }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/user/register",
+        "https://enchanting-pear-abalone.cyclic.app/api/v1/user/register",
         formData,
         {
           withCredentials: true,

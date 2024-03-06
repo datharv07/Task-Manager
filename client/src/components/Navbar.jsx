@@ -17,7 +17,7 @@ function Header({ setTasks, setIsAuthenticated, isAuthenticated }) {
   const fetchTasks = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/api/v1/task/mytask",
+        "https://enchanting-pear-abalone.cyclic.app/api/v1/task/mytask",
         { withCredentials: true }
       );
       setAllTasks(response.data.tasks);
@@ -30,7 +30,7 @@ function Header({ setTasks, setIsAuthenticated, isAuthenticated }) {
   const handleLogout = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/user/logout",
+        "https://enchanting-pear-abalone.cyclic.app/api/v1/user/logout",
         { withCredentials: true }
       );
       toast.success(data.message);

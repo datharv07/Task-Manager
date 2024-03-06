@@ -31,7 +31,7 @@ const Home = ({ isAuthenticated, setTasks, taskTitle, setTaskTitle }) => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/v1/task/mytask', { withCredentials: true });
+      const response = await axios.get('https://enchanting-pear-abalone.cyclic.app/api/v1/task/mytask', { withCredentials: true });
       setAllTasks(response.data.tasks);
     } catch (error) {
       console.error('Error fetching tasks:', error);
@@ -64,7 +64,7 @@ const Home = ({ isAuthenticated, setTasks, taskTitle, setTaskTitle }) => {
 
   const deleteTask = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:4000/api/v1/task/delete/${id}`, { withCredentials: true });
+      const response = await axios.delete(`https://enchanting-pear-abalone.cyclic.app/api/v1/task/delete/${id}`, { withCredentials: true });
       toast.success(response.data.message);
       setTasks((prevTasks) => prevTasks.filter((task) => task._id !== id));
     } catch (error) {
