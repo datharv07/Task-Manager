@@ -11,7 +11,8 @@ app.listen(process.env.PORT, () => {
   console.log(`Server Listening on port: ${process.env.PORT}`);
 });
 
+
 app.get("/", (req, res) => {
-  res.json({ message: "Server Working at 2:18 7-3  " });
+  res.json({ message: "Server Working", frontendUrl: process.env.FRONTEND_URL });
   console.log(process.env.FRONTEND_URL);
 });

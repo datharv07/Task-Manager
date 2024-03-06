@@ -9,7 +9,7 @@ import userRouter from "./routes/userRouter.js";
 import taskRouter from "./routes/taskRouter.js";
 
 const app = express();
-dotenv.config({ path: "./config/config.env" });
+dotenv.config({ path: ".process.env" });
 
 app.use(
   cors({
