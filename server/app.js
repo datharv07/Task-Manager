@@ -20,7 +20,7 @@ app.use(cors(corsOptions));
 
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+  res.setHeader('Access-Control-Allow-Origin', 'https://task-manager-5sbz.vercel.app');
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   next();
 });
