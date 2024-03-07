@@ -22,7 +22,9 @@ app.get("/render", (req, res) => {
     frontendUrl: PORT,
     database: process.env.MONGO_URI,
     frontendUrl12334: PORT ,
-    CLOUDINARY_CLIENT_SECRET :process.env.CLOUDINARY_CLIENT_SECRET
+    CLOUDINARY_CLIENT_SECRET :process.env.CLOUDINARY_CLIENT_SECRET ,
+    CLOUDINARY_CLIENT_API :process.env.CLOUDINARY_CLIENT_API ,
+    CLOUDINARY_CLIENT_NAME :process.env.CLOUDINARY_CLIENT_NAME 
   });
   console.log(process.env.FRONTEND_URL);
 });
