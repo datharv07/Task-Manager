@@ -1,7 +1,7 @@
 {
   "name": "task-manager",
   "version": "1.0.0",
-  "proxy" :  "http://localhost:5173" ,
+  "proxy" :  "https://task-manager-5sbz.vercel.app/" ,
   "private": true,
   "description": "Simple task manager , begginer friendly ",
   "main": "index.js",
