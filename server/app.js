@@ -9,15 +9,24 @@ import userRouter from "./routes/userRouter.js";
 import taskRouter from "./routes/taskRouter.js";
 
 const app = express();
-dotenv.config({ path: ".process.env" });
+dotenv.config({ path: "./config/config.env" });
 
-app.use(
-  cors({
-    origin: process.env.FRONTEND_URL,
-    methods: ["GET", "PUT", "DELETE", "POST"],
-    credentials: true,
-  })
-);
+const PORT = process.env.PORT || 6010
+
+
+app.use(cors());
+
+app.get("/render", (req, res) => {
+  res.json({ message: "Server Working on render", frontendUrl: PORT });
+  console.log(process.env.FRONTEND_URL);
+});
+
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  next();
+});
 
 app.use(cookieParser());
 app.use(express.json());
