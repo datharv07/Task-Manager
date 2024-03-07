@@ -21,7 +21,8 @@ app.get("/render", (req, res) => {
     message: "Server Working on render",
     frontendUrl: PORT,
     database: process.env.MONGO_URI,
-    frontendUrl12334: PORT
+    frontendUrl12334: PORT ,
+    CLOUDINARY_CLIENT_SECRET :process.env.CLOUDINARY_CLIENT_SECRET
   });
   console.log(process.env.FRONTEND_URL);
 });
