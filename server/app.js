@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 6010
 app.use(cors());
 
 app.get("/render", (req, res) => {
-  res.json({ message: "Server Working on render", frontendUrl: PORT ,frontendUrl: process.env.PORT});
+  res.json({ message: "Server Working on render", frontendUrl: PORT ,frontendUrl123: process.env.PORT});
   console.log(process.env.FRONTEND_URL);
 });
 
