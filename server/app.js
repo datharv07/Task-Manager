@@ -17,7 +17,12 @@ const PORT = process.env.PORT || 6010
 app.use(cors());
 
 app.get("/render", (req, res) => {
-  res.json({ message: "Server Working on render", frontendUrl: PORT ,frontendUrl123: process.env.PORT , frontendUrl12334 : PORT});
+  res.json({
+    message: "Server Working on render",
+    frontendUrl: PORT,
+    database: process.env.MONGO_URI,
+    frontendUrl12334: PORT
+  });
   console.log(process.env.FRONTEND_URL);
 });
 
